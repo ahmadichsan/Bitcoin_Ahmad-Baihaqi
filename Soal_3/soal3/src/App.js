@@ -1,24 +1,22 @@
 import React, { Component } from 'react';
-import './App.css';
-// import axios from 'axios';
+import Bitcoin from './component/Bitcoin';
+import Rptobit from './component/Rptobit';
+import Bittorp from './component/Bittorp';
 
-class App extends Component 
-{
-  // componentDidMount()
-  // {
-  //   axios.get('Link').then((ambilData) => {
-  //     console.log(ambilData);
-  //   })
-  // };
+import { Route } from 'react-router-dom';
 
-  render() 
+
+class App extends Component {
+    
+  render()
   {
-    return (
+  return (
       <div>
-        
+        <Route exact path="/" component={Bitcoin}/>
+        <Route path="/Rptobit" component={Rptobit}/>
+        <Route path="/Bittorp" component={Bittorp}/>
       </div>
-    );
+      );
+    }
   }
-}
-
 export default App;
